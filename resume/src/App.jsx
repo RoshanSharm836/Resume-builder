@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Edu from "./Edu";
+import Edu from "./Component/Edu";
 import { useRef } from "react";
+import Skills from "./Component/Skills";
 
 function App() {
   let fnameRef = useRef();
@@ -31,7 +32,6 @@ function App() {
 
   return (
     <div className="App">
-      <Edu />
       {/* <form className="form" onSubmit={handle}>
         <lable>First Name</lable>
         <input type="text" ref={fnameRef} name="fname" id="fname" />
@@ -51,6 +51,10 @@ function App() {
         <textarea type="text" ref={summaryRef} name="summary" id="summary" />
         <input type="submit" value="Next" />
       </form> */}
+
+      {/* 
+      <Edu /> call when next clicked */}
+      <Skills />
     </div>
   );
 }

@@ -21,7 +21,6 @@ function Edu() {
     Userdetailfromlocal.edu = obj;
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
     console.log(Userdetailfromlocal, "kawhdk");
-    // console.log(obj);
   };
 
   return (

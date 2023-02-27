@@ -52,9 +52,10 @@ function App() {
         <input type="submit" value="Next" />
       </form> */}
 
-      {/* 
-      <Edu /> call when next clicked */}
-      <Skills />
+      {/* call when apps next btm clicked  */}
+      <Edu />
+      {/* call when edu next btm clicked */}
+      {/* <Skills /> */}
     </div>
   );
 }

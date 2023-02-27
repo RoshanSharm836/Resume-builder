@@ -28,13 +28,11 @@ function Skills() {
     arr1.push(threeRef.current.value);
     arr1.push(fourRef.current.value);
     arr1.push(fiveRef.current.value);
-    obj.hobbies = arr;
-    obj.skills = arr1;
+    Userdetailfromlocal.hobbies = arr;
+    Userdetailfromlocal.skills = arr1;
 
-    let obj2 = { Userdetailfromlocal, ...obj };
-    localStorage.setItem("resumedata", JSON.stringify(obj2));
+    localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
     console.log(Userdetailfromlocal, "kawhdk");
-    // console.log({ ...Userdetailfromlocal, ...obj });
   };
 
   return (

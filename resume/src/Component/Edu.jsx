@@ -1,5 +1,9 @@
 import React, { useRef } from "react";
+import "../Style/Input.css";
+import { useNavigate } from "react-router-dom";
 function Edu() {
+  const navi = useNavigate();
+
   let snameRef = useRef();
   let degreeRef = useRef();
   let sdateRef = useRef();
@@ -21,20 +25,30 @@ function Edu() {
     Userdetailfromlocal.edu = obj;
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
     console.log(Userdetailfromlocal, "kawhdk");
+    navi("/skill");
   };
 
   return (
-    <form className="edu" onSubmit={handle}>
-      <label>Eduction</label>
-      <label htmlFor="">School</label>
-      <input type="text" ref={snameRef} name="schoolname" id="schoolname" />
+    <form onSubmit={handle} className="edu">
+      <h1>Education</h1>
+      <label>Education</label>
+      <input
+        type="text"
+        ref={snameRef}
+        name="schoolname"
+        id="schoolname"
+        required
+      />
       <label htmlFor="">Degree</label>
-      <input type="text" ref={degreeRef} name="Degree" id="Degree" />
-      <label htmlFor="">Starting & Ending Date</label>
-      <input type="date" ref={sdateRef} name="sdate" id="sdate" />
-      <input type="date" ref={edateRef} name="edate" id="edate" />
+      <input type="text" ref={degreeRef} name="Degree" id="Degree" required />
+      <div className="date">
+        <label htmlFor="">Starting Date</label>
+        <input type="date" ref={sdateRef} name="sdate" id="sdate" required />
+        <label htmlFor="">Ending Date</label>
+        <input type="date" ref={edateRef} name="edate" id="edate" required />
+      </div>
       <label htmlFor="">City</label>
-      <input type="text" ref={cityRef} name="City" id="City" />
+      <input type="text" ref={cityRef} name="City" id="City" required />
       <label htmlFor="">Description</label>
       <textarea
         type="text"
@@ -42,6 +56,7 @@ function Edu() {
         name="Description"
         id="Description"
       />
+
       <input type="submit" value="Next" />
     </form>
   );

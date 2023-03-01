@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
+import "../Style/Input.css";
+import { useNavigate } from "react-router-dom";
 
 function Skills() {
+  const navi = useNavigate();
+
   let one_hobRef = useRef();
   let two_hobRef = useRef();
   let three_hobRef = useRef();
@@ -33,23 +37,33 @@ function Skills() {
 
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
     console.log(Userdetailfromlocal, "kawhdk");
+    navi("/resume");
   };
 
   return (
     <form className="skill" onSubmit={handle}>
       <label>Skills</label>
-      <input type="text" ref={oneRef} name="one" id="oneRef" />
-      <input type="text" ref={twoRef} name="two" id="twoRef" />
-      <input type="text" ref={threeRef} name="three" id="threeRef" />
+      <hr />
+      <input type="text" ref={oneRef} name="one" id="oneRef" required />
+      <input type="text" ref={twoRef} name="two" id="twoRef" required />
+      <input type="text" ref={threeRef} name="three" id="threeRef" required />
       <input type="text" ref={fourRef} name="four" id="fourRef" />
       <input type="text" ref={fiveRef} name="five" id="fiveRef" />
+
       <label>Hobbies</label>
-      <input type="text" ref={one_hobRef} name="one" id="one_hobRef" />
-      <input type="text" ref={two_hobRef} name="two" id="two_hobRef" />
-      <input type="text" ref={three_hobRef} name="three" id="three_hobRef" />
+      <hr />
+      <input type="text" ref={one_hobRef} name="one" id="one_hobRef" required />
+      <input type="text" ref={two_hobRef} name="two" id="two_hobRef" required />
+      <input
+        type="text"
+        ref={three_hobRef}
+        name="three"
+        id="three_hobRef"
+        required
+      />
       <input type="text" ref={four_hobRef} name="four" id="four_hobRef" />
       <input type="text" ref={five_hobRef} name="five" id="five_hobRef" />
-      <input type="submit" value="next" />
+      <input type="submit" value="Done" />
     </form>
   );
 }

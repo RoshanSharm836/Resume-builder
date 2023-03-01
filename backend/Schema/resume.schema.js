@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 // mongoose schema is used for giving structure and getting some of the perdefined function
 const resumeschema = new mongoose.Schema(
   {
+    address: { type: String },
     city: { type: String },
     country: { type: String },
     dob: { type: String },

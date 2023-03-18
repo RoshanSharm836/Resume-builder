@@ -1,0 +1,89 @@
+.dream-dots {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.content-about button {
+    background-color: #152e54;
+    border: none;
+    padding: 14px 20px;
+    color: white;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.about-us,
+.delivery {
+    margin: 60px 0px;
+}
+
+.about-us .Box {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 26px 0px;
+    padding: 13px;
+}
+
+.content-about {
+    margin: 30px 0px;
+
+}
+
+.content-about h3 {
+    color: #F54768;
+    font-weight: 700;
+}
+
+.content-about p {
+    line-height: 30px;
+}
+
+.dots {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.dots span:nth-child(1) {
+    background-color: #d54209;
+}
+
+.dots span:nth-child(2) {
+    background-color: #487eb0;
+}
+
+.dots span:nth-child(3) {
+    background-color: #fbc531;
+}
+
+.dots span:nth-child(4) {
+    background-color: #e84118;
+}
+
+.dots span:nth-child(5) {
+    background-color: #4cd137;
+}
+
+.dots span:nth-child(6) {
+    background-color: #8c7ae6;
+}
+
+.delivery h3 {
+    background-color: #F54768;
+    color: white;
+    font-weight: 700;
+    width: 55%;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+}
+
+.delivery p{
+    font-weight: 600;
+    font-size: 17px;
+}

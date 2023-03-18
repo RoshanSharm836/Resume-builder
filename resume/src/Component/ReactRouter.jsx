@@ -5,16 +5,20 @@ import Skills from "./Skills";
 import Login from "./Login";
 import PageNotFounf from "./PageNotFounf";
 import Basic from "./Basic";
-import Resume from "./Resume";
+import Project from "./Project";
+import Resumes from "./Resumes";
+import LandingPage from "./LandingPage";
 function ReactRouter() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Basic />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/basic" element={<Basic />} />
         <Route path="/edu" element={<Edu />} />
         <Route path="/login" element={<Login />} />
         <Route path="/skill" element={<Skills />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/resume" element={<Resumes />} />
         <Route path="*" element={<PageNotFounf />} />
       </Routes>
     </>

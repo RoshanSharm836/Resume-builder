@@ -3,9 +3,10 @@ const resume = require("../Schema/resume.schema");
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/:param", async (req, res) => {
   try {
-    return res.status(200).send("resume");
+    console.log(req.params);
+    res.send("yes");
   } catch (error) {
     res.status(500).send(error.message);
   }

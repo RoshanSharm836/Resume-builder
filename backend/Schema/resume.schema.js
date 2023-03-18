@@ -5,9 +5,11 @@ const resumeschema = new mongoose.Schema(
   {
     address: { type: String },
     city: { type: String },
+    state: { type: String },
     country: { type: String },
     dob: { type: String },
     edu: { type: Object, required: true },
+    project: { type: Object, required: true },
     email: { type: String },
     fname: { type: String, required: true },
     lname: { type: String, required: true },
@@ -15,6 +17,9 @@ const resumeschema = new mongoose.Schema(
     phone: { type: String },
     skills: { type: Array, value: [String] },
     summary: { type: String },
+    github: { type: String },
+    LinkedIn: { type: String },
+    Portfolio: { type: String },
   },
   {
     versionKey: false,

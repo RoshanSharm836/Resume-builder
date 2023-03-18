@@ -1,0 +1,86 @@
+.container {
+    background-color: #2A3950;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    color: rgb(214, 211, 211);
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+
+.about {
+    width: 30%;
+}
+
+.socialHandle h4 {
+    color: #FF9678;
+}
+
+.socialHandle {
+    width: 100%;
+}
+
+.socialHandle i {
+    margin: 0px 10px;
+    font-size: 20px;
+    background-color: #F54768;
+    border-radius: 70%;
+    padding: 10px;
+    color: white;
+}
+
+.caarrer {
+    width: 22%;
+}
+
+.newsletter input {
+    padding: 6px 20px;
+    border-radius: 20px;
+    border: 2px solid #F54768;
+}
+
+.newsletter button {
+    padding: 6px 74px;
+    border-radius: 20px;
+    background-color: #F54768;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+
+}
+
+.end {
+    background-color: rgb(62, 63, 63);
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.end p {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    .foot {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .socialHandle i {
+        margin: 0px 4px;
+    }
+
+    .caarrer {
+        width: 100%;
+    }
+}

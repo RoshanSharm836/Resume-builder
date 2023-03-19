@@ -5,7 +5,7 @@
 <p>About url-shortener</p>
 <p>It is a free URL Shortener for transforming long, ugly links into nice, memorable and trackable short URLs. Use it to shorten links for any social media platforms.</p>
 <h4>About this project</h4>
-<a target="_blank" href="https://fastresumes.cyclic.app/">Netlify Link</a>
+<a target="_blank" href="https://fastresumes.netlify.app/">Netlify Link</a>
 
 <h1>Contributers:</h1>
 <ul>

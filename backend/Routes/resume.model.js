@@ -11,6 +11,13 @@ router.get("/:param", async (req, res) => {
     res.status(500).send(error.message);
   }
 });
+router.get("/", async (req, res) => {
+  try {
+    res.send("Roshan");
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
 router.post("/", async (req, res) => {
   try {
     const data = await resume.create(req.body);

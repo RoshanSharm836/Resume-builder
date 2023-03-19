@@ -2,8 +2,8 @@
 <img width="1500" src="https://github.com/Roshanrocked/Resume-builder/blob/main/resume/public/Screenshot%20(472).png" alt="Resume-builder">
 <img width="1500" src="https://github.com/Roshanrocked/Resume-builder/blob/main/resume/public/Screenshot%20(473).png" alt="Resume-builder">
 <h1>About ✨</h1>
-<p>About url-shortener</p>
-<p>It is a free URL Shortener for transforming long, ugly links into nice, memorable and trackable short URLs. Use it to shorten links for any social media platforms.</p>
+<p>
+  Our Perfect resume builder takes the hassle out of resume writing. Choose from several templates and follow easy prompts to create the perfect job-ready resume.</p>
 <h4>About this project</h4>
 <a target="_blank" href="https://fastresumes.netlify.app/">Netlify Link</a>
 

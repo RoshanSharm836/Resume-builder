@@ -21,10 +21,10 @@ function Resumes() {
               </p>
               <span>FULLSTACK DEVELOPER</span>
             </div>
-            <img
+            {/* <img
               src="https://th.bing.com/th/id/OIP.P2ixwd8Oykw_Gaqv98RR2QHaE8?pid=ImgDet&rs=1"
               alt="img"
-            />
+            /> */}
           </div>
         </div>
         <div className="left">

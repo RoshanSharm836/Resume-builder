@@ -13,7 +13,9 @@ router.get("/:param", async (req, res) => {
 });
 router.get("/", async (req, res) => {
   try {
-    res.send("Roshan");
+    const data = await resume.find();
+    console.log("data", data);
+    return res.status(200).send(data);
   } catch (error) {
     res.status(500).send(error.message);
   }

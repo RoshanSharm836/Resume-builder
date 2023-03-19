@@ -20,7 +20,7 @@
   <li>Javascript</li>
 </ul>
 
-<h1>Pages & Features</h1>
+<h1>Pages</h1>
 <ul> 
   <li>Landing Page</li>
   <li>Basic deatails Page</li>

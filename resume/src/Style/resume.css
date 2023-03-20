@@ -39,7 +39,7 @@ li {
   grid-template-rows: 15rem 1fr;
   background: #fff;
   width: 21cm;
-  height: 32cm;
+  min-height: 32cm;
   margin: auto;
 }
 .header {

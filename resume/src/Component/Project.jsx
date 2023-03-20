@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "../Style/Input.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function Project() {
   const navi = useNavigate();
+  const [id, setId] = useState();
   let nameRef = useRef();
   let LinkRef = useRef();
   let DesripRef = useRef();
@@ -32,7 +33,18 @@ export default function Project() {
     DesripRef.current.value = "";
     TechRef.current.value = "";
   };
-  const handle = (e) => {
+
+  const post = async (Userdetailfromlocal) => {
+    await axios
+      .post("https://fastresume-backend.onrender.com", Userdetailfromlocal)
+      .then((res) => {
+        console.log("res", res.data._id);
+        navi(`/resume/${res.data._id}`);
+      });
+  };
+
+  const handle = async (e) => {
+    e.preventDefault();
     let obj = {};
     obj.ProjectName = nameRef.current.value;
     obj.ProjectLink = LinkRef.current.value;
@@ -41,12 +53,10 @@ export default function Project() {
     project.push(obj);
     Userdetailfromlocal.project = project;
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
-    console.log("Userdetailfromlocal", Userdetailfromlocal);
 
-    axios.post("http://localhost:8000", Userdetailfromlocal);
-
-    navi("/resume");
+    await post(Userdetailfromlocal);
   };
+
   return (
     <form onSubmit={handle} className="Project">
       <h1>Projects</h1>

@@ -1,12 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Style/resume.css";
 import ReactToPrint from "react-to-print";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 function Resumes() {
   const [data, setData] = useState({});
   const componentRef = useRef();
+  const newID = useParams();
   useEffect(() => {
-    const a = JSON.parse(localStorage.getItem("resumedata"));
-    setData(a);
+    // const a = JSON.parse(localStorage.getItem("resumedata"));
+    axios
+      .get(`https://fastresume-backend.onrender.com/${newID}`)
+      .then((res) => {
+        setData(res);
+      });
   }, []);
 
   return (
@@ -19,7 +26,7 @@ function Resumes() {
                 <span>{data?.fname}</span>
                 <span>{data?.lname}</span>
               </p>
-              <span>FULLSTACK DEVELOPER</span>
+              <span>{data?.role}</span>
             </div>
             {/* <img
               src="https://th.bing.com/th/id/OIP.P2ixwd8Oykw_Gaqv98RR2QHaE8?pid=ImgDet&rs=1"
@@ -31,34 +38,34 @@ function Resumes() {
           <section>
             <div class="contact-info">
               <span>
-                <span>Address : </span>
+                <span>Address: </span>
                 <span> {data?.address + "," + data?.country}</span>
               </span>
               <span>
-                <span>Moblie :</span>
+                <span>Moblie: </span>
                 <span>{data?.phone}</span>
               </span>
               <span>
-                <span>Email :</span>
+                <span>Email: </span>
 
                 <span>{data?.email}</span>
               </span>
               <span>
-                <span>portfolio :</span>
+                <span>portfolio: </span>
                 <span>{data?.Portfolio}</span>{" "}
               </span>
               <span>
-                <span>LinkedIn:</span>
+                <span>LinkedIn: </span>
                 <span>{" " + data?.LinkedIn}</span>
               </span>
               <span>
-                <span>Github :</span>
+                <span>Github: </span>
                 <span>{data?.github} </span>
               </span>
             </div>
           </section>
           <section>
-            <h4>TECHNICAL SKILLS</h4>
+            <h4>SKILLS</h4>
 
             <ul>
               {data?.skills?.map((el) => {

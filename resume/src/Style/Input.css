@@ -26,7 +26,11 @@ h1 {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("./background.png");
+  background-size: cover;
+  /* background-image: url("https://img.freepik.com/premium-vector/abstract-gradient-purple-pink-curve-wave-stripes-with-glitters-gradient-dark-purple_35756-117.jpg?w=740");
+  background-image: url("https://as2.ftcdn.net/v2/jpg/05/55/86/47/1000_F_555864799_SuSVPZZEkO5tQzvmuTRVjRAmQ9ekZl3b.jpg"); */
+  background-image: url("./background2.jpeg");
+  /* background-image: url("https://img.freepik.com/free-vector/modern-abstract-papercut-style-elegant-background-design_1017-27240.jpg?size=626&ext=jpg&ga=GA1.1.2057480445.1678466760&semt=ais"); */
 }
 @media screen and (max-width: 992px) {
   .edu,
@@ -66,7 +70,7 @@ h1 {
   background-color: #cbefffba;
   /* # */
   margin: auto;
-  max-height: 80vh;
+  min-height: 80vh;
   gap: 10px;
   border-radius: 15px;
   justify-content: center;

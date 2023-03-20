@@ -6,14 +6,12 @@ import axios from "axios";
 function Resumes() {
   const [data, setData] = useState({});
   const componentRef = useRef();
-  const newID = useParams();
+  const { id } = useParams();
   useEffect(() => {
-    // const a = JSON.parse(localStorage.getItem("resumedata"));
-    axios
-      .get(`https://fastresume-backend.onrender.com/${newID}`)
-      .then((res) => {
-        setData(res);
-      });
+    localStorage.removeItem("resumedata");
+    axios.get(`https://fastresume-backend.onrender.com/${id}`).then((res) => {
+      setData(res);
+    });
   }, []);
 
   return (
@@ -23,10 +21,10 @@ function Resumes() {
           <div className="header_box">
             <div className="header_heading">
               <p>
-                <span>{data?.fname}</span>
-                <span>{data?.lname}</span>
+                <span>{data?.data?.fname}</span>
+                <span>{data?.data?.lname}</span>
               </p>
-              <span>{data?.role}</span>
+              <span>{data?.data?.role}</span>
             </div>
             {/* <img
               src="https://th.bing.com/th/id/OIP.P2ixwd8Oykw_Gaqv98RR2QHaE8?pid=ImgDet&rs=1"
@@ -39,28 +37,28 @@ function Resumes() {
             <div class="contact-info">
               <span>
                 <span>Address: </span>
-                <span> {data?.address + "," + data?.country}</span>
+                <span> {data?.data?.address + "," + data?.data?.country}</span>
               </span>
               <span>
                 <span>Moblie: </span>
-                <span>{data?.phone}</span>
+                <span>{data?.data?.phone}</span>
               </span>
               <span>
                 <span>Email: </span>
 
-                <span>{data?.email}</span>
+                <span>{data?.data?.email}</span>
               </span>
               <span>
                 <span>portfolio: </span>
-                <span>{data?.Portfolio}</span>{" "}
+                <span>{data?.data?.Portfolio}</span>{" "}
               </span>
               <span>
                 <span>LinkedIn: </span>
-                <span>{" " + data?.LinkedIn}</span>
+                <span>{" " + data?.data?.LinkedIn}</span>
               </span>
               <span>
                 <span>Github: </span>
-                <span>{data?.github} </span>
+                <span>{data?.data?.github} </span>
               </span>
             </div>
           </section>
@@ -68,9 +66,9 @@ function Resumes() {
             <h4>SKILLS</h4>
 
             <ul>
-              {data?.skills?.map((el) => {
+              {data?.data?.skills?.map((el, i) => {
                 if (el !== "") {
-                  return <li>{el}</li>;
+                  return <li key={i}>{el}</li>;
                 }
               })}
             </ul>
@@ -78,9 +76,9 @@ function Resumes() {
           <section>
             <h4>Hobbies</h4>
             <ul>
-              {data?.hobbies?.map((el) => {
+              {data?.data?.hobbies?.map((el, i) => {
                 if (el !== "") {
-                  return <li>{el}</li>;
+                  return <li key={i}>{el}</li>;
                 }
               })}
             </ul>
@@ -88,9 +86,9 @@ function Resumes() {
           <section>
             <h4>education</h4>
             <div className="education_box">
-              {data?.edu?.map((el) => {
+              {data?.data?.edu?.map((el, i) => {
                 return (
-                  <div className="education">
+                  <div className="education" key={i}>
                     <h5>
                       <b>{el.degree}</b>
                     </h5>
@@ -106,14 +104,14 @@ function Resumes() {
         <div className="right">
           <section>
             <h4>PROFESSIONAL Summary</h4>
-            <p>{data?.summary}</p>
+            <p>{data?.data?.summary}</p>
           </section>
           <section>
             <h4>Projects</h4>
 
-            {data?.project?.map((el) => {
+            {data?.data?.project?.map((el, i) => {
               return (
-                <article>
+                <article key={i}>
                   <h5>{el.ProjectName}</h5>
                   <p>{el.ProjectDescp}</p>
                   <p>

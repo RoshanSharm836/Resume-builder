@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Edu from "./Edu";
 import Skills from "./Skills";
 import Login from "./Login";

@@ -1,11 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "../Style/Input.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function Project() {
   const navi = useNavigate();
-  const [id, setId] = useState();
   let nameRef = useRef();
   let LinkRef = useRef();
   let DesripRef = useRef();
@@ -17,16 +16,16 @@ export default function Project() {
   const UpdateProject = async (e) => {
     e.preventDefault();
     let obj = {};
-    console.log("update");
     obj.ProjectName = nameRef.current.value;
     obj.ProjectLink = LinkRef.current.value;
     obj.ProjectDescp = DesripRef.current.value;
     obj.ProjectTech = TechRef.current.value;
     project.push(obj);
+
     // commit line no 26 to 28 and call this function in handle and this line after
     // it will help us to reuse the code.
+
     Userdetailfromlocal.project = project;
-    console.log("Userdetailfromlocal", Userdetailfromlocal);
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
     nameRef.current.value = "";
     LinkRef.current.value = "";

@@ -36,7 +36,7 @@ function Skills() {
     Userdetailfromlocal.skills = arr1;
 
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
-    console.log(Userdetailfromlocal, "kawhdk");
+    // console.log(Userdetailfromlocal, "kawhdk");
     /// make an post api req to mongodb and send data of Userdetailfromlocal variable already schema is created.
 
     navi("/project");

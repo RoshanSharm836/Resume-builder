@@ -37,7 +37,7 @@ function Edu() {
     arr.push(obj);
     Userdetailfromlocal.edu = arr;
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
-    console.log("array", arr);
+    // console.log("array", arr);
     snameRef.current.value = "";
     degreeRef.current.value = "";
     sdateRef.current.value = "";
@@ -55,12 +55,12 @@ function Edu() {
     obj.city = cityRef.current.value;
     obj.desc = DesripRef.current.value;
 
-    console.log(obj, "kawhdk");
+    // console.log(obj, "kawhdk");
     arr.push(obj);
-    console.log("array", arr);
+    // console.log("array", arr);
     Userdetailfromlocal.edu = arr;
     localStorage.setItem("resumedata", JSON.stringify(Userdetailfromlocal));
-    console.log(Userdetailfromlocal, "kawhdk");
+    // console.log(Userdetailfromlocal, "kawhdk");
     navi("/skill");
   };
 

@@ -26,7 +26,7 @@ export default function Basic() {
     obj.dob = dobRef.current.value;
     obj.address = addressRef.current.value;
     localStorage.setItem("resumedata", JSON.stringify(obj));
-    console.log(obj);
+    // console.log(obj);
     navi("/basicTwo");
   };
   return (

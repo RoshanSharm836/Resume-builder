@@ -1,49 +1,53 @@
 .hero-image {
-    background-image: url("https://www.pcclean.io/wp-content/uploads/2020/4/NnYvuq.jpg");
-    background-color: #cccccc;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("https://www.pcclean.io/wp-content/uploads/2020/4/NnYvuq.jpg");
+  background-color: #cccccc;
+  /* height: 500px; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-image h2 {
-    color: #F54768;
-    font-size: 48px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f54768;
+  font-size: 48px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Sans Unicode",
+    Geneva, Verdana, sans-serif;
 }
 
+.hero-image > .container {
+  display: flex;
+  align-items: center;
+  min-height: 700px;
+}
 .hero-image p {
-    width: 60%;
-    font-size: 17px;
+  width: 60%;
+  font-size: 17px;
 }
 
 .hero-image button {
-    background-color: #FF9678;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: 600;
+  background-color: #ff9678;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 .hero-image button:hover {
-
-    background-color: #F54768;
+  background-color: #f54768;
 }
 
 .btn_type {
-    color: white;
+  color: white;
 }
 
 .btn_type:hover {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .hero_content {
-    position: absolute;
-    top: 29%;
-
+  position: absolute;
+  top: 29%;
 }

@@ -51,13 +51,11 @@ li {
   align-items: center;
 }
 .header_box {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  /* gap: 30px; */
-  background-color: #dfdfdf;
-  justify-content: space-around;
+  background-color: #c7c5c5;
   height: 10rem;
+  justify-content: space-around;
+  width: 60%;
+  border-radius: 0 30px 30px 0px;
 }
 .header_heading {
   display: flex;

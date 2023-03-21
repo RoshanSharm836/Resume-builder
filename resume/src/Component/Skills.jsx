@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "../Style/Input.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
 
 function Skills() {
   const navi = useNavigate();
@@ -43,69 +44,72 @@ function Skills() {
   };
 
   return (
-    <form className="skill" onSubmit={handle}>
-      <label>Skills</label>
-      <div className="Skills_box1">
+    <>
+      <Navbar />
+      <form className="skill" onSubmit={handle}>
+        <label>Skills</label>
+        <div className="Skills_box1">
+          <hr />
+          <input
+            type="text"
+            ref={oneRef}
+            name="one"
+            placeholder="Eg - React.js"
+            id="oneRef"
+            required
+          />
+          <input
+            type="text"
+            ref={twoRef}
+            name="two"
+            placeholder="Eg - React.js"
+            id="twoRef"
+            required
+          />
+          <input
+            type="text"
+            ref={threeRef}
+            name="three"
+            placeholder="Eg - React.js"
+            id="threeRef"
+            required
+          />
+          <input type="text" ref={fourRef} name="four" id="fourRef" />
+          <input type="text" ref={fiveRef} name="five" id="fiveRef" />
+        </div>
+        <label>Hobbies</label>
         <hr />
-        <input
-          type="text"
-          ref={oneRef}
-          name="one"
-          placeholder="Eg - React.js"
-          id="oneRef"
-          required
-        />
-        <input
-          type="text"
-          ref={twoRef}
-          name="two"
-          placeholder="Eg - React.js"
-          id="twoRef"
-          required
-        />
-        <input
-          type="text"
-          ref={threeRef}
-          name="three"
-          placeholder="Eg - React.js"
-          id="threeRef"
-          required
-        />
-        <input type="text" ref={fourRef} name="four" id="fourRef" />
-        <input type="text" ref={fiveRef} name="five" id="fiveRef" />
-      </div>
-      <label>Hobbies</label>
-      <hr />
-      <div className="Skills_box1">
-        <input
-          type="text"
-          ref={one_hobRef}
-          name="one"
-          id="one_hobRef"
-          placeholder="Eg - anythings"
-          required
-        />
-        <input
-          type="text"
-          ref={two_hobRef}
-          name="two"
-          placeholder="Eg - anything"
-          id="two_hobRef"
-          required
-        />
-        <input
-          type="text"
-          ref={three_hobRef}
-          placeholder="Eg - anything"
-          name="three"
-          id="three_hobRef"
-          required
-        />
-        <input type="text" ref={four_hobRef} name="four" id="four_hobRef" />
-        <input type="text" ref={five_hobRef} name="five" id="five_hobRef" />
-      </div>
-      <input type="submit" value="Next     ▶" />
-    </form>
+        <div className="Skills_box1">
+          <input
+            type="text"
+            ref={one_hobRef}
+            name="one"
+            id="one_hobRef"
+            placeholder="Eg - anythings"
+            required
+          />
+          <input
+            type="text"
+            ref={two_hobRef}
+            name="two"
+            placeholder="Eg - anything"
+            id="two_hobRef"
+            required
+          />
+          <input
+            type="text"
+            ref={three_hobRef}
+            placeholder="Eg - anything"
+            name="three"
+            id="three_hobRef"
+            required
+          />
+          <input type="text" ref={four_hobRef} name="four" id="four_hobRef" />
+          <input type="text" ref={five_hobRef} name="five" id="five_hobRef" />
+        </div>
+        <input type="submit" value="Next     ▶" />
+      </form>
+    </>
   );
 }
 

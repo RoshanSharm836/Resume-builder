@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "../Style/Input.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
 function Edu() {
   const navi = useNavigate();
 
@@ -65,54 +66,58 @@ function Edu() {
   };
 
   return (
-    <form onSubmit={handle} className="edu">
-      <h1>Education</h1>
-      <label>School/College</label>
-      <input
-        type="text"
-        ref={snameRef}
-        name="schoolname"
-        id="schoolname"
-        placeholder="School / college name"
-        required
-      />
-      <label htmlFor="">Degree</label>
-      <input
-        type="text"
-        ref={degreeRef}
-        name="Degree"
-        placeholder="Eg - Intermediate, Bachelor of Computer Science"
-        id="Degree"
-        required
-      />
-      <div className="date">
-        <label htmlFor="">Starting Date</label>
-        <input type="date" ref={sdateRef} name="sdate" id="sdate" required />
-        <label htmlFor="">Ending Date</label>
-        <input type="date" ref={edateRef} name="edate" id="edate" required />
-      </div>
-      <label htmlFor="">City</label>
-      <input
-        type="text"
-        ref={cityRef}
-        name="City"
-        placeholder="Eg - pune"
-        id="City"
-        required
-      />
-      <label htmlFor="">Description</label>
-      <textarea
-        type="text"
-        ref={DesripRef}
-        placeholder="Eg - Graduated with ..."
-        name="Description"
-        id="Description"
-      />
-      <button className="add" onClick={UpdateEdu}>
-        +
-      </button>
-      <input type="submit" value="Next     ▶" />
-    </form>
+    <>
+      <Navbar />
+
+      <form onSubmit={handle} className="edu">
+        <h1>Education</h1>
+        <label>School/College</label>
+        <input
+          type="text"
+          ref={snameRef}
+          name="schoolname"
+          id="schoolname"
+          placeholder="School / college name"
+          required
+        />
+        <label htmlFor="">Degree</label>
+        <input
+          type="text"
+          ref={degreeRef}
+          name="Degree"
+          placeholder="Eg - Intermediate, Bachelor of Computer Science"
+          id="Degree"
+          required
+        />
+        <div className="date">
+          <label htmlFor="">Starting Date</label>
+          <input type="date" ref={sdateRef} name="sdate" id="sdate" required />
+          <label htmlFor="">Ending Date</label>
+          <input type="date" ref={edateRef} name="edate" id="edate" required />
+        </div>
+        <label htmlFor="">City</label>
+        <input
+          type="text"
+          ref={cityRef}
+          name="City"
+          placeholder="Eg - pune"
+          id="City"
+          required
+        />
+        <label htmlFor="">Description</label>
+        <textarea
+          type="text"
+          ref={DesripRef}
+          placeholder="Eg - Graduated with ..."
+          name="Description"
+          id="Description"
+        />
+        <button className="add" onClick={UpdateEdu}>
+          +
+        </button>
+        <input type="submit" value="Next     ▶" />
+      </form>
+    </>
   );
 }
 

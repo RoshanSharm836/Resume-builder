@@ -1,6 +1,6 @@
 # Resume-builder
-<img width="1500" src="https://github.com/Roshanrocked/Resume-builder/blob/main/resume/public/Screenshot%20(472).png" alt="Resume-builder">
-<img width="1500" src="https://github.com/Roshanrocked/Resume-builder/blob/main/resume/public/Screenshot%20(473).png" alt="Resume-builder">
+<img width="1500" src="https://github.com/Roshanrocked/Resume-builder/blob/main/public/Screenshot%20(472).png" alt="Resume-builder">
+<img width="1500" src="https://github.com/Roshanrocked/Resume-builder/blob/main/public/Screenshot%20(473).png" alt="Resume-builder">
 <h1>About ✨</h1>
 <p>
   Our Perfect resume builder takes the hassle out of resume writing. Choose from several templates and follow easy prompts to create the perfect job-ready resume.</p>
